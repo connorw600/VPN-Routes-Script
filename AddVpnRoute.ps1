@@ -46,7 +46,7 @@ function AddVpnRoutes {
     } else {
         "Downloading Amazon AWS IP route list" | Write-Output
         # Get the list of eu-west-1 and eu-west-2 IP ranges
-        $ipRanges = (Invoke-WebRequest -Uri "https://git.connorw600.dev/connorw600/condensed-aws-ip-ranges/-/raw/ip-ranges/ip-ranges.txt").Content.Split("`n")
+        $ipRanges = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/connorw600/Condensed-AWS-IP-ranges/ip-ranges/ip-ranges.txt").Content.Split("`n")
     }
 
     foreach ($ipRange in $ipRanges) {
